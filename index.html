@@ -13,13 +13,15 @@
 <body>
     <div id="app">
         <h1>Recommend Me</h1>
-        <span>Title: </span>
-        <form>
-            <input v-model="titleValue">
-            <span>Type: </span>
+        <form v-on:submit.prevent="getRecommendations">
+            Title: <input></input>
+            Type:
             <select v-model="typeSelection">
-            <option disabled value=""></option>
-        </select>
+                <option disabled value=""></option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
