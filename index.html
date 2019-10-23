@@ -14,14 +14,18 @@
     <div id="app">
         <h1>Recommend Me</h1>
         <form v-on:submit.prevent="getRecommendations">
-            Title: <input></input>
+            Input: <input v-model="inputSelection"></input>
             Type:
             <select v-model="typeSelection">
                 <option disabled value=""></option>
+                <option v-for="type in types"> {{ type }} </option>
             </select>
             <button type="submit">Submit</button>
         </form>
-
+        <h2>Recommendations</h2>
+        <ul>
+            <li v-for="recommendation in recommendations">{{name}} {{type}}</li>
+        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
