@@ -20,6 +20,9 @@ var app = new Vue({
                     console.log(json);
                     console.log(json.Similar.Results);
                     this.recommendations = json.Similar.Results;
+                })
+                .catch(error => {
+                    console.log(error);
                 });
         }
     },
