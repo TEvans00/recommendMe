@@ -16,7 +16,7 @@ var app = new Vue({
     methods: {
         getRecommendations() {
             let url = this.cors + this.baseURL;
-            console.log(this.inputSelection)
+            console.log(this.inputSelection);
             for (let i = 0; i < this.forms.length; i++) {
                 url += this.typeSelection[i] + ":" + this.inputSelection[i].replace(" ", "+") + ",";
             }
@@ -41,7 +41,6 @@ var app = new Vue({
         addForm() {
             this.forms.push(this.numForms);
             this.numForms++;
-            //this.forms.push("<form><input v-model='inputSelection'></input><select v-model='typeSelection'><option disabled value=''></option><option v-for='type in types'> {{ type }} </option></select></form>");
         },
         reset() {
             this.numForms = 0;
@@ -55,15 +54,4 @@ var app = new Vue({
     created: function() {
         this.addForm();
     },
-    computed: {
-        /*modifiedInput: function() {
-            let newInput = [];
-            console.log(this.inputSelection[0]);
-            for (let i = 0; i < this.inputSelection.length(); i++) {
-                //console.log(this.inputSelection[i]);
-                //newInput.push(this.inputSelection[i].replace(" ", "+"));
-            }
-            return newInput;
-        }*/
-    }
 });
