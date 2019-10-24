@@ -18,17 +18,16 @@
         <div id="main">
             <p id="explanation">Looking for a new book to read, movie to watch, song to listen to, or game to play? You're in the right place! In the fields below, enter the names of media you've enjoyed in the past. We'll recommend similar items that you are sure to enjoy!</p>
             <div v-for="(form, index) in forms">
-                <input id="input-field" type="text" v-model="inputSelection[index]">
-                <select id="select-field" v-model='typeSelection[index]'>
-                <option disabled value=''></option>
-                <option v-for='type in types'> {{ type }} </option>
-            </select>
-                <br>
+                <div id="row"><input type="text" placeholder="Title" v-model="inputSelection[index]">
+                    <select id="select-field" v-model='typeSelection[index]'>
+                    <option disabled value="">Select type</option>
+                    <option v-for='type in types'> {{ type }} </option>
+                </select></div>
                 <br>
             </div>
-            <button v-on:click="addForm">Add Item</button>
+            <div id="buttons"><button v-on:click="addForm">Add New Search Item</button>
             <button v-on:click="getRecommendations">Submit</button>
-            <button v-on:click="reset">Reset</button>
+            <button v-on:click="reset">Reset</button></div>
             <h2>Recommendations</h2>
             <div v-show='noRecommendations'>
                 <p>No recommendations found.</p>

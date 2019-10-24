@@ -15,6 +15,7 @@ var app = new Vue({
     },
     methods: {
         getRecommendations() {
+            this.noRecommendations = false;
             let url = this.cors + this.baseURL;
             console.log(this.inputSelection);
             for (let i = 0; i < this.forms.length; i++) {
@@ -40,6 +41,7 @@ var app = new Vue({
         },
         addForm() {
             this.forms.push(this.numForms);
+            this.typeSelection[this.numForms] = "";
             this.numForms++;
         },
         reset() {

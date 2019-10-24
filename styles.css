@@ -5,7 +5,7 @@ body {
 }
 
 #main {
-    width: 80%;
+    width: 65%;
     margin: auto;
 }
 
@@ -17,26 +17,76 @@ body {
     color: #F0F7F4;
 }
 
-#input-field {
-    width: 20%;
+input {
+    padding: 5px;
+    border: 2px solid #32292F;
+    background-color: #6EABB0;
+    color: #32292F;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #705D55;
+}
+
+select {
+    padding: 5px;
+    border: 2px solid #32292F;
+    background-color: #6EABB0;
+}
+
+select:focus {
+    outline: none;
+    background-color: #6EABB0;
+}
+
+option {
+    color: #32292F;
+}
+
+option:checked {
+    background-color: #6EABB0;
+}
+
+option:hover {
+    background-color: #96E1D9;
+}
+
+button {
+    padding: 5px;
+    border: 2px solid #32292F;
+    background-color: #6EABB0;
+    color: #32292F;
+}
+
+#default {
+    color: #32292F;
 }
 
 #explanation {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0px;
     background-color: #96E1D9;
-    width: 80%;
     padding: 15px;
     border-style: solid;
     border-color: #F0F7F4;
     color: #32292F;
 }
 
+#row {
+    width: 100%;
+    text-align: center;
+}
+
+#buttons {
+    text-align: center;
+}
+
 h1 {
-    width: 83%;
+    width: 68%;
     margin: auto;
 }
 
