@@ -11,25 +11,32 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="header">
         <h1>Recommend Me</h1>
-        <div v-for="(form, index) in forms">
-            <input type="text" v-model="inputSelection[index]">
-            <select v-model='typeSelection[index]'>
+    </div>
+    <div id="app">
+        <div id="main">
+            <p id="explanation">Looking for a new book to read, movie to watch, song to listen to, or game to play? You're in the right place! In the fields below, enter the names of media you've enjoyed in the past. We'll recommend similar items that you are sure to enjoy!</p>
+            <div v-for="(form, index) in forms">
+                <input id="input-field" type="text" v-model="inputSelection[index]">
+                <select id="select-field" v-model='typeSelection[index]'>
                 <option disabled value=''></option>
                 <option v-for='type in types'> {{ type }} </option>
             </select>
+                <br>
+                <br>
+            </div>
+            <button v-on:click="addForm">Add Item</button>
+            <button v-on:click="getRecommendations">Submit</button>
+            <button v-on:click="reset">Reset</button>
+            <h2>Recommendations</h2>
+            <div v-show='noRecommendations'>
+                <p>No recommendations found.</p>
+            </div>
+            <ul>
+                <li v-for="recommendation in recommendations">{{recommendation.Name}} {{recommendation.Type}}</li>
+            </ul>
         </div>
-        <button v-on:click="addForm">Add Item</button>
-        <button v-on:click="getRecommendations">Submit</button>
-        <button v-on:click="reset">Reset</button>
-        <h2>Recommendations</h2>
-        <div v-show='noRecommendations'>
-            <p>No recommendations found.</p>
-        </div>
-        <ul>
-            <li v-for="recommendation in recommendations">{{recommendation.Name}} {{recommendation.Type}}</li>
-        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>

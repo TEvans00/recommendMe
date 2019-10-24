@@ -1,3 +1,45 @@
+body {
+    background-color: #705D55;
+    margin: 0px;
+    color: #F0F7F4;
+}
+
+#main {
+    width: 80%;
+    margin: auto;
+}
+
+#header {
+    width: 96%;
+    background-color: #96E1D9;
+    padding: 15px 2%;
+    margin: 0px;
+    color: #F0F7F4;
+}
+
+#input-field {
+    width: 20%;
+}
+
+#explanation {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #96E1D9;
+    width: 80%;
+    padding: 15px;
+    border-style: solid;
+    border-color: #F0F7F4;
+    color: #32292F;
+}
+
+h1 {
+    width: 83%;
+    margin: auto;
+}
+
 ul {
     list-style: none;
 }
