@@ -13,16 +13,20 @@
 <body>
     <div id="app">
         <h1>Recommend Me</h1>
-        <form v-on:submit.prevent="getRecommendations">
-            Input: <input v-model="inputSelection"></input>
-            Type:
-            <select v-model="typeSelection">
-                <option disabled value=""></option>
-                <option v-for="type in types"> {{ type }} </option>
+        <div v-for="(form, index) in forms">
+            <input type="text" v-model="inputSelection[index]">
+            <select v-model='typeSelection[index]'>
+                <option disabled value=''></option>
+                <option v-for='type in types'> {{ type }} </option>
             </select>
-            <button type="submit">Submit</button>
-        </form>
+        </div>
+        <button v-on:click="addForm">Add Item</button>
+        <button v-on:click="getRecommendations">Submit</button>
+        <button v-on:click="reset">Reset</button>
         <h2>Recommendations</h2>
+        <div v-show='noRecommendations'>
+            <p>No recommendations found.</p>
+        </div>
         <ul>
             <li v-for="recommendation in recommendations">{{recommendation.Name}} {{recommendation.Type}}</li>
         </ul>
