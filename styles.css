@@ -1,7 +1,6 @@
 body {
-    background-color: #705D55;
+    background-color: #F2F0F0;
     margin: 0px;
-    color: #F0F7F4;
 }
 
 #main {
@@ -11,16 +10,16 @@ body {
 
 #header {
     width: 96%;
-    background-color: #96E1D9;
+    background-color: #193D5A;
     padding: 15px 2%;
     margin: 0px;
-    color: #F0F7F4;
+    color: #FFAD00;
 }
 
 input {
     padding: 5px;
-    border: 2px solid #32292F;
-    background-color: #6EABB0;
+    border: 2px solid #193D5A;
+    background-color: #F2F0F0;
     color: #32292F;
 }
 
@@ -34,13 +33,12 @@ input:focus {
 
 select {
     padding: 5px;
-    border: 2px solid #32292F;
-    background-color: #6EABB0;
+    border: 2px solid #193D5A;
+    background-color: #F2F0F0;
 }
 
 select:focus {
     outline: none;
-    background-color: #6EABB0;
 }
 
 option {
@@ -48,18 +46,18 @@ option {
 }
 
 option:checked {
-    background-color: #6EABB0;
+    background-color: #A6E0B9;
 }
 
 option:hover {
-    background-color: #96E1D9;
+    background-color: #A6E0B9;
 }
 
 button {
     padding: 5px;
-    border: 2px solid #32292F;
-    background-color: #6EABB0;
-    color: #32292F;
+    background-color: #193D5A;
+    color: #F2F0F0;
+    border: none;
 }
 
 #default {
@@ -69,11 +67,9 @@ button {
 #explanation {
     text-align: center;
     margin: 15px 0px;
-    background-color: #96E1D9;
     padding: 15px;
-    border-style: solid;
-    border-color: #F0F7F4;
-    color: #32292F;
+    border: 5px solid #FFAD00;
+    color: #01151A;
 }
 
 #row {
@@ -92,4 +88,8 @@ h1 {
 
 ul {
     list-style: none;
+}
+
+h2 {
+    color: #FFAD00;
 }
