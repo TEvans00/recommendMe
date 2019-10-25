@@ -117,7 +117,7 @@ h3 {
     border-bottom: 3px solid #FFAD00;
 }
 
-diff {
+.diff {
     color: #FFAD00;
 }
 
@@ -144,4 +144,8 @@ a:hover {
     margin: 0px;
     background: #193D5A;
     color: #FFAD00;
+}
+
+#padding {
+    padding: 40px;
 }
