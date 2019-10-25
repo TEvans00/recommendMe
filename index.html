@@ -40,7 +40,10 @@
                     <h3 class='recTitle'>{{recommendation.Name}} ({{recommendation.Type}})</h3>
                     <p class='recDescription'>{{recommendation.wTeaser}}</p>
                     <p class='recLink' v-if='recommendation.wURL !== null'><a href='recommendation.wURL'>Read More on Wikipedia</a></p>
-                    <iframe v-if='recommendation.yID !== null' id="ytplayer" type="text/html" width="640" height="360" :src="'https://www.youtube.com/embed/'+recommendation.yID+'?autoplay=0&origin=http://example.com'" frameborder="0"></iframe>
+                    <div v-if='recommendation.yID !== null' class='iframe-container'>
+                        <iframe id="ytplayer" type="text/html" width="640" height="360" :src="'https://www.youtube.com/embed/'+recommendation.yID+'?autoplay=0&origin=http://example.com'" frameborder="0"></iframe>
+                    </div>
+                    <br>
                 </li>
             </ul>
         </div>
