@@ -26,14 +26,18 @@
                 <br>
             </div>
             <div id="buttons"><button v-on:click="addForm">Add New Search Item</button>
-            <button v-on:click="getRecommendations">Submit</button>
-            <button v-on:click="reset">Reset</button></div>
+                <button v-on:click="getRecommendations">Submit</button>
+                <button v-on:click="reset">Reset</button></div>
             <h2>Recommendations</h2>
             <div v-show='noRecommendations'>
                 <p>No recommendations found.</p>
             </div>
             <ul>
-                <li v-for="recommendation in recommendations">{{recommendation.Name}} {{recommendation.Type}}</li>
+                <li v-for="recommendation in recommendations">
+                    <h3 class='recTitle'>{{recommendation.Name}} ({{recommendation.Type}})</h3>
+                    <p class='recDescription'>{{recommendation.wTeaser}}</p>
+                    <p class='recLink' v-if='recommendation.wURL !== null'><a href='recommendation.wURL'>Read More on Wikipedia</a></p>
+                    <iframe v-if='recommendation.yID !== null' id="ytplayer" type="text/html" width="640" height="360" :src="'https://www.youtube.com/embed/'+recommendation.yID+'?autoplay=0&origin=http://example.com'" frameborder="0"></iframe> </li>
             </ul>
         </div>
     </div>

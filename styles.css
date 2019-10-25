@@ -81,6 +81,8 @@ button {
     text-align: center;
 }
 
+#recTitle {}
+
 h1 {
     width: 68%;
     margin: auto;
@@ -92,4 +94,8 @@ ul {
 
 h2 {
     color: #FFAD00;
+}
+
+h3 {
+    color: #193D5A;
 }
