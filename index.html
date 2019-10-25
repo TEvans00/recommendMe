@@ -30,7 +30,10 @@
                 <button v-on:click="reset">Reset</button></div>
             <h2>Recommendations</h2>
             <div v-show='noRecommendations'>
-                <p>No recommendations found.</p>
+                <p>No recommendations found. Check your spelling, or try a different search.</p>
+            </div>
+            <div v-show='limitExceded'>
+                <p>Please try again later.</p>
             </div>
             <ul>
                 <li v-for="recommendation in recommendations">
